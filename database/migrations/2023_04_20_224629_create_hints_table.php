@@ -12,8 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('hints', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('question_id')->nullable();
+            $table->string('hint');
             $table->timestamps();
+            
+            //set question_id as foreign key (ie. if question is deleted, its hints will also be deleted)
+            $table->foreign('question_id')->references('id')->on('questions')
+            ->onDelete('cascade');
         });
     }
 
