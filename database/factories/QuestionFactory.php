@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Question;
+use Faker\Generator as Faker;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Question>
@@ -17,7 +19,8 @@ class QuestionFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => $this->faker->text(40),
+            'body' => $this->faker->text(200)
         ];
     }
 }
