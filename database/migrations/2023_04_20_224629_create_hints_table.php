@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('hints', function (Blueprint $table) {
             $table->unsignedBigInteger('question_id')->nullable();
-            $table->string('hint');
+            $table->text('hint');
             $table->timestamps();
             
             //set question_id as foreign key (ie. if question is deleted, its hints will also be deleted)
