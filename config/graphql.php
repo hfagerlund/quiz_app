@@ -75,14 +75,23 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
+                'hint' => \App\GraphQL\Queries\HintQuery::class,
+                'hints' => \App\GraphQL\Queries\HintsQuery::class,
+                'question' => \App\GraphQL\Queries\QuestionQuery::class,
+                'questions' => \App\GraphQL\Queries\QuestionsQuery::class,
             ],
             'mutation' => [
-                // ExampleMutation::class,
+                'createHint' => \App\GraphQL\Mutations\CreateHintMutation::class,
+                'updateHint' => \App\GraphQL\Mutations\UpdateHintMutation::class,
+                'deleteHint' => \App\GraphQL\Mutations\DeleteHintMutation::class,
+                'createQuestion' => \App\GraphQL\Mutations\CreateQuestionMutation::class,
+                'updateQuestion' => \App\GraphQL\Mutations\UpdateQuestionMutation::class,
+                'deleteQuestion' => \App\GraphQL\Mutations\DeleteQuestionMutation::class,
             ],
             // The types only available in this schema
             'types' => [
-                // ExampleType::class,
+                'Hint' => \App\GraphQL\Types\HintType::class,
+                'Question' => \App\GraphQL\Types\QuestionType::class,
             ],
 
             // Laravel HTTP middleware
