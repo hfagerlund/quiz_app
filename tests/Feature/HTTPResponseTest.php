@@ -6,6 +6,8 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
+use Illuminate\Http\Response;
+
 class HTTPResponseTest extends TestCase
 {
     /**
@@ -13,8 +15,8 @@ class HTTPResponseTest extends TestCase
      */
     public function test_example(): void
     {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
+       $response = $this->post('/graphql/', ['query' => '{questions{}}']);
+       $response
+            ->assertStatus(200);
+       }
 }
