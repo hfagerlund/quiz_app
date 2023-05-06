@@ -44,10 +44,9 @@ $ ./vendor/bin/sail php artisan dusk:install
 ### Good to Know (miscellaneous commands)
 <!-- .................... -->
 <details>
-  <summary>Auto-generate code <strong>[+]</strong></summary>
+  <summary>Auto-generate code <strong>[+]</strong> <em>models, migrations, factories, GraphQL schema</em></summary>
 
 <br />
-<em>models, migrations, factories, GraphQL schema</em><br />
 
 ```console
 # generate model, migration
@@ -63,10 +62,9 @@ $ ./vendor/bin/sail artisan make:graphql:type QuestionType
 </details>
 <!-- .................... -->
 <details>
-  <summary>Installation <strong>[+]</strong></summary>
+  <summary>Installation <strong>[+]</strong> <em>Laravel 10, libraries</em></summary>
 
 <br />
-<em>Laravel 10, libraries</em><br />
 
 ```console
 # install Laravel 10 app (including Sail, MySQL, Redis, Selnium)
@@ -74,15 +72,16 @@ $ curl -s https://laravel.build/new-sail-application | bash
 
 # install library for GraphQL
 $ ./vendor/bin/sail composer require rebing/graphql-laravel
+## publish config file (from /vendor dir to /config/graphql.php)
+$ ./vendor/bin/sail php artisan vendor:publish --provider="Rebing\GraphQL\GraphQLServiceProvider"
 ```
 
 </details>
 <!-- .................... -->
 <details>
-  <summary>Configuration <strong>[+]</strong></summary>
+  <summary>Configuration <strong>[+]</strong> <em>caching configuration, switching environments</em></summary>
 
 <br />
-<em>caching configuration, switching environments</em><br />
 
 ```console
 # cache configuration
@@ -95,10 +94,9 @@ $ ./vendor/bin/sail php artisan config:clear
 </details>
 <!-- .................... -->
 <details>
-  <summary>Database <strong>[+]</strong></summary>
+  <summary>Database <strong>[+]</strong> <em>running migrations, db schema, db client</em></summary>
 
 <br />
-<em>running migrations, db schema, db client</em><br />
 
 ```console
 # run migrations
