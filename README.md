@@ -41,7 +41,13 @@ $ ./vendor/bin/sail composer require --dev laravel/dusk
 $ ./vendor/bin/sail php artisan dusk:install
 ```
 
-### Good to Know
+### Good to Know (miscellaneous commands)
+<!-- .................... -->
+<details>
+  <summary>Auto-generate code <strong>[+]</strong></summary>
+
+<br />
+
 ```console
 # generate model, migration
 $ ./vendor/bin/sail artisan make:model -m Question
@@ -49,20 +55,47 @@ $ ./vendor/bin/sail artisan make:model -m Question
 # generate model, migration, factory
 $ ./vendor/bin/sail artisan make:model Question -m -f
 
-# run migrations
-$ ./vendor/bin/sail artisan migrate
+# generate GraphQL type
+$ ./vendor/bin/sail artisan make:graphql:type QuestionType
+```
 
+</details>
+<!-- .................... -->
+<details>
+  <summary>Installation <strong>[+]</strong></summary>
+
+<br />
+
+```console
+# install library for GraphQL
+$ ./vendor/bin/sail composer require rebing/graphql-laravel
+```
+
+</details>
+<!-- .................... -->
+<details>
+  <summary>Configuration <strong>[+]</strong></summary>
+
+<br />
+
+```console
 # cache configuration
 $ ./vendor/bin/sail php artisan config:cache --env=testing
 
 # clear configuration cache
 $ ./vendor/bin/sail php artisan config:clear
+```
 
-# install library for GraphQL
-$ ./vendor/bin/sail composer require rebing/graphql-laravel
+</details>
+<!-- .................... -->
+<details>
+  <summary>Database <strong>[+]</strong></summary>
 
-# generate GraphQL type
-$ ./vendor/bin/sail artisan make:graphql:type QuestionType
+<br />
+
+```console
+# run migrations
+$ ./vendor/bin/sail artisan migrate
 
 # dump database schema (ie. 'squash' migrations into a single SQL file)
 $ ./vendor/bin/sail php artisan schema:dump
@@ -70,6 +103,8 @@ $ ./vendor/bin/sail php artisan schema:dump
 # access MySQL command-line client
 $ ./vendor/bin/sail mysql
 ```
+
+</details>
 
 ## License
 Copyright (c) 2023 Heini Fagerlund. Refer to [License](https://github.com/hfagerlund/quiz_app/blob/main/LICENSE).
