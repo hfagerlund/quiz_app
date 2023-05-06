@@ -47,6 +47,7 @@ $ ./vendor/bin/sail php artisan dusk:install
   <summary>Auto-generate code <strong>[+]</strong></summary>
 
 <br />
+<em>models, migrations, factories, GraphQL schema</em><br />
 
 ```console
 # generate model, migration
@@ -65,8 +66,12 @@ $ ./vendor/bin/sail artisan make:graphql:type QuestionType
   <summary>Installation <strong>[+]</strong></summary>
 
 <br />
+<em>Laravel 10, libraries</em><br />
 
 ```console
+# install Laravel 10 app (including Sail, MySQL, Redis, Selnium)
+$ curl -s https://laravel.build/new-sail-application | bash
+
 # install library for GraphQL
 $ ./vendor/bin/sail composer require rebing/graphql-laravel
 ```
@@ -77,6 +82,7 @@ $ ./vendor/bin/sail composer require rebing/graphql-laravel
   <summary>Configuration <strong>[+]</strong></summary>
 
 <br />
+<em>caching configuration, switching environments</em><br />
 
 ```console
 # cache configuration
@@ -92,6 +98,7 @@ $ ./vendor/bin/sail php artisan config:clear
   <summary>Database <strong>[+]</strong></summary>
 
 <br />
+<em>running migrations, db schema, db client</em><br />
 
 ```console
 # run migrations
