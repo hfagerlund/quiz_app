@@ -9,6 +9,10 @@ Quiz API backend using Laravel 10, Sail, Docker with Vue front-end.
 
 ## Quick start
 ```console
+# clone this project
+$ git clone https://github.com/hfagerlund/quiz_app.git
+$ cd quiz_app
+
 # start Sail
 $ ./vendor/bin/sail up
 # stop Sail
@@ -44,7 +48,7 @@ $ ./vendor/bin/sail php artisan dusk:install
 ### Good to Know (miscellaneous commands)
 <!-- .................... -->
 <details>
-  <summary>Auto-generate code <strong>[+]</strong> <em>models, migrations, factories, GraphQL schema</em></summary>
+  <summary><strong>Auto-generate code [+]</strong> <em>models, migrations, factories, GraphQL schema</em></summary>
 
 <br />
 
@@ -62,7 +66,7 @@ $ ./vendor/bin/sail artisan make:graphql:type QuestionType
 </details>
 <!-- .................... -->
 <details>
-  <summary>Installation <strong>[+]</strong> <em>Laravel 10, libraries</em></summary>
+  <summary><strong>Installation [+]</strong> <em>Laravel 10, libraries</em></summary>
 
 <br />
 
@@ -79,7 +83,7 @@ $ ./vendor/bin/sail php artisan vendor:publish --provider="Rebing\GraphQL\GraphQ
 </details>
 <!-- .................... -->
 <details>
-  <summary>Configuration <strong>[+]</strong> <em>caching configuration, switching environments</em></summary>
+  <summary><strong>Configuration [+]</strong> <em>caching configuration, switching environments</em></summary>
 
 <br />
 
@@ -94,7 +98,7 @@ $ ./vendor/bin/sail php artisan config:clear
 </details>
 <!-- .................... -->
 <details>
-  <summary>Database <strong>[+]</strong> <em>running migrations, db schema, db client</em></summary>
+  <summary><strong>Database [+]</strong> <em>running migrations, db schema, db client</em></summary>
 
 <br />
 
