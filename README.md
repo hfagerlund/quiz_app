@@ -20,6 +20,10 @@ $ ./vendor/bin/sail down
 
 # check state of services
 $ docker-compose ps
+
+# run front-end app (ie. Vite dev server)
+$ ./vendor/bin/sail npm run dev
+## browse to http://localhost
 ```
 
 ## Tests
