@@ -5,6 +5,9 @@ Quiz API backend using Laravel 10, Sail, Docker with Vue front-end.
 * Laravel - v10.7.1
 * PHP     - v8.2.5
 
+* Node    - v18.16.0
+* npm     - v9.6.4
+
 (All copyrights for the above remain with their respective owners.)
 
 ## Quick start
@@ -115,6 +118,22 @@ $ ./vendor/bin/sail php artisan schema:dump
 
 # access MySQL command-line client
 $ ./vendor/bin/sail mysql
+```
+
+</details>
+<!-- .................... -->
+<details>
+  <summary><strong>Front-end Vue app [+]</strong> <em>running Node, npm, Vite dev server</em></summary>
+
+<br />
+
+```console
+# Node, npm versions
+$ ./vendor/bin/sail node -v
+$ ./vendor/bin/sail npm -v
+
+# run Vite development server (provides Hot Module Replacement for Laravel application)
+$ ./vendor/bin/sail npm run dev
 ```
 
 </details>
