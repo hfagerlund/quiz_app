@@ -22,7 +22,7 @@ abstract class TestCase extends BaseTestCase
         parent::setUp();
 
         $this->faker = Faker::create();
-
+        $this->withoutVite();
         Artisan::call('migrate'); // runs the migration
     }
 
