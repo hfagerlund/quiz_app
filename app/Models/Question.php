@@ -11,6 +11,7 @@ class Question extends Model
     use HasFactory;
 
     protected $fillable = ['title', 'body'];
+    public $table = 'questions';
     /**
      * Get the hints for the question.
      */
