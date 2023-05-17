@@ -35,8 +35,7 @@ $ ./vendor/bin/sail npm run dev
 $ ./vendor/bin/sail artisan test
 
 # run a specific test
-## where test = 'test_example', file = './tests/Feature/HTTPResponseTest.php'
-$ ./vendor/bin/sail artisan test --filter test_example ./tests/Feature/HTTPResponseTest.php
+$ ./vendor/bin/sail test --testsuite Feature --filter=DatabaseTest
 
 # generate (feature) test
 $ ./vendor/bin/sail php artisan make:test HTTPResponseTest
