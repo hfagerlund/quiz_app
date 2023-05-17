@@ -8,13 +8,10 @@ use Tests\TestCase;
 
 class DatabaseTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
-    public function test_example(): void
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
+    use RefreshDatabase;
+    
+    public function test_correct_number_of_questions_created(){
+    $this->seed();
+    $this->assertDatabaseCount('questions', 11);
     }
 }
