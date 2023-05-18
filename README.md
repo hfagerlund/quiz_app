@@ -104,13 +104,16 @@ $ ./vendor/bin/sail php artisan config:clear
 </details>
 <!-- .................... -->
 <details>
-  <summary><strong>Database [+]</strong> <em>running migrations, db schema, db client</em></summary>
+  <summary><strong>Database [+]</strong> <em>running migrations, seeders, db schema, db client</em></summary>
 
 <br />
 
 ```console
 # run migrations
 $ ./vendor/bin/sail artisan migrate
+
+# drop all tables, migrate, seed db
+$ ./vendor/bin/sail artisan migrate:fresh --seed
 
 # dump database schema (ie. 'squash' migrations into a single SQL file)
 $ ./vendor/bin/sail php artisan schema:dump
