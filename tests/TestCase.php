@@ -3,16 +3,18 @@
 namespace Tests;
 
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
-
-use Faker\Factory as Faker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Artisan;
 
 abstract class TestCase extends BaseTestCase
 {
-    use CreatesApplication, RefreshDatabase;
+    use CreatesApplication;
 
-    protected $faker;
+    /**
+     * Indicates whether the default seeder should run before each test.
+     *
+     * @var bool
+     */
+    protected $seed = true;
 
     /**
      * Sets up the tests
@@ -21,11 +23,9 @@ abstract class TestCase extends BaseTestCase
     {
         parent::setUp();
 
-        $this->faker = Faker::create();
         $this->withoutVite();
         Artisan::call('migrate'); // runs the migration
     }
-
 
     /**
      * Rolls back migrations
