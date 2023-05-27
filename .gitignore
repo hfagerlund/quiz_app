@@ -22,4 +22,5 @@ yarn-error.log
 /.idea
 /.vscode
 /tests/coverage
+/tests/Browser/console/*.log
 docker-compose.override.yml
