@@ -8,14 +8,12 @@ use Tests\DuskTestCase;
 
 class ExampleTest extends DuskTestCase
 {
-    /**
-     * A basic browser test example.
-     */
-    public function testBasicExample(): void
+    public function test_app_component_is_rendered_in_welcome_view(): void
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-                    ->assertSee('Laravel');
+                    ->assertSee('Quiz app');
+                    //->assertSee('<h1>Quiz app</h1>', false);
         });
     }
 }
