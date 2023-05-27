@@ -8,13 +8,10 @@ use Tests\TestCase;
 
 class ViewsTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
-    public function test_example(): void
+    public function test_a_welcome_blade_view_can_be_rendered(): void
     {
-        $response = $this->get('/');
+        $view = $this->view('welcome');
 
-        $response->assertStatus(200);
+        $view->assertSee('Laravel v10.10.0');
     }
 }
