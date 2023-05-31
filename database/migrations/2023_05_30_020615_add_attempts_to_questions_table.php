@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('questions', function (Blueprint $table) {
-            $table->integer('attempts');
+            $table->integer('attempts')->nullable();
         });
     }
 
@@ -21,8 +21,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('questions', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('questions');
     }
 };
