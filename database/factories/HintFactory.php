@@ -19,7 +19,8 @@ class HintFactory extends Factory
     public function definition(): array
     {
         return [
-            'hint' => $this->faker->text(350)
+            'hint' => $this->faker->text(350),
+            'points_decreased_by' => $this->faker->randomDigit()
         ];
     }
 }
