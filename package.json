@@ -3,7 +3,7 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "test": "vitest"
+        "test": "vitest --dom"
     },
     "devDependencies": {
         "@vitejs/plugin-vue": "^4.2.1",
