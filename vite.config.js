@@ -4,9 +4,6 @@ import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-    test: {
-      // ...
-    },  
     plugins: [
         laravel([
             //'resources/css/app.css',
@@ -31,4 +28,7 @@ export default defineConfig({
             },
         }),
     ],
+    test: {
+      globals:true,
+    },
 });
