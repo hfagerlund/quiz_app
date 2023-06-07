@@ -26,6 +26,14 @@ class QuestionType extends GraphQLType
                 'type' => Type::nonNull(Type::string()),
                 'description' => 'Title of the question'
             ],
+            'attempts' => [
+                'type' => Type::int(),
+                'description' => 'Number of attempts at answering question'
+            ],
+            'points' => [
+                'type' => Type::int(),
+                'description' => 'Points value of question'
+            ],
             'body' => [
                 'type' => Type::nonNull(Type::string()),
                 'description' => 'Content of the question'

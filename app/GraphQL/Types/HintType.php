@@ -27,6 +27,10 @@ class HintType extends GraphQLType
                 'type' => Type::nonNull(Type::string()),
                 'description' => 'Content of the hint'
             ],
+            'points_decreased_by' => [
+                'type' => Type::int(),
+                'description' => 'Points value of hint'
+            ],
             'question' => [
                 'type' => GraphQL::type('Question'),
                 'description' => 'The question associated with the hint'
