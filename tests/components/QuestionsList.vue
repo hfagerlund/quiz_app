@@ -35,8 +35,11 @@ export default {
                                     id
                                     title
                                     body
+                                    attempts
+                                    points
                                     hints {
                                       hint
+                                      points_decreased_by
                                     }
                                 }
                         }`
