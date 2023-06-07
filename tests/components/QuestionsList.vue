@@ -1,5 +1,5 @@
 <template>
-  <h2>Questions</h2>
+  <h2 class="quizheading">Questions</h2>
     <div class="post" v-for="questionData in quizDataList" v-bind:key="questionData.id">
             <h3>Question: {{ questionData.title }}</h3>
             <p>{{ questionData.body }}</p>
@@ -15,9 +15,12 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+        name: 'QuestionsList',
         data() {
             return {
+                dataReady: false,
                 quizDataList: []
             };
         },
@@ -27,9 +30,8 @@ export default {
                     method: "POST",
                     url: "http://0.0.0.0/graphql",
                     data: {
-                        query: `
-                            {
-                                questions {
+                        query: `{
+                               questions {
                                     id
                                     title
                                     body
@@ -37,10 +39,10 @@ export default {
                                       hint
                                     }
                                 }
-                            }
-                        `
+                        }`
                     }
                 });
+                this.dataReady = true;
                 this.quizDataList = result.data.data.questions;
             } catch (error) {
                 console.error(error);
