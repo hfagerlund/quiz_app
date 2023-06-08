@@ -21,7 +21,8 @@ class QuestionFactory extends Factory
         return [
             'title' => $this->faker->text(40),
             'body' => $this->faker->text(200),
-            'points' => $this->faker->randomDigit()
+            'points' => $this->faker->randomDigit(),
+            'attempts' => $this->faker->randomDigit()
         ];
     }
 }
