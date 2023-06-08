@@ -4,6 +4,7 @@ Quiz API backend using Laravel 10, Sail, Docker with Vue front-end.
 ## What's going on here?
 * Laravel - v10.7.1
 * PHP     - v8.2.5
+* PHPUnit - v10.1.2
 
 * Node    - v18.16.0
 * npm     - v9.6.4
@@ -31,8 +32,10 @@ $ ./vendor/bin/sail npm run dev
 
 ## Tests
 ```console
-# run all tests
+# run all tests (feature, unit, database etc.)
 $ ./vendor/bin/sail artisan test
+# run all tests (for front-end, Vue components)
+$ ./vendor/bin/sail npm run test
 
 # run a specific test
 $ ./vendor/bin/sail test --testsuite Feature --filter=DatabaseTest
