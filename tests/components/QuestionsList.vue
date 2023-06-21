@@ -48,7 +48,7 @@ export default {
                 this.dataReady = true;
                 this.quizDataList = result.data.data.questions;
             } catch (error) {
-                console.error(error);
+                //console.error(error);
             }
         }
     }

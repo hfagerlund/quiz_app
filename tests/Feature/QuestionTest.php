@@ -31,6 +31,25 @@ class QuestionTest extends TestCase
         ->assertJsonFragment(['title' => $questions[0]->title]);
    }
 
+    public function test_questions_can_be_updated_via_api() {
+    $questions = Question::factory(\App\Models\Question::class)->count(2)->create();
+
+    $this->postJson('graphql', [
+          'query' => <<<GQL
+            mutation {
+              updateQuestion(id:1, title:"Test Title", body: "foo") {
+                title
+                body
+              }
+            }
+          GQL
+        ])
+        ->assertJsonFragment(['title' => 'Test Title'])
+        ->assertSee('Test')
+        ->assertDontSee('test') //case-sensitive
+        ->assertSeeText('foo');
+   }
+
    public function test_questions_have_attempts_field() {
     $questions = Question::factory(\App\Models\Question::class)->count(2)->create();
 
