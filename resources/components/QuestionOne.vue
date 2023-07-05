@@ -1,4 +1,5 @@
 <template>
+  <h2>Question One</h2>
   <div class="container">
   <div class="start-box">
     <div
@@ -8,7 +9,7 @@
       v-on:dragstart="onDragStart($event)"
     >
       <!-- draggable -->
-      Drag this item to the correct drop zone.
+      Drag this item to place it in the correct sequence.
     </div>
   </div>
 
@@ -40,7 +41,7 @@
 
 <script>
 export default {
-  name: 'Testing',
+  name: 'QuestionOne',
   props: {
     msg: String
   },
@@ -78,13 +79,13 @@ export default {
 
 <style scoped>
 .container {
-  border: 2px solid #000;
   background-color:transparent;
   color: #000;
   display: flex;
 }
 
 .start-box {
+  border: 2px solid #999;
   flex-basis: 100%;
   flex-grow: 1;
   padding: 0.2em;
@@ -100,6 +101,7 @@ export default {
 
 .dropzone {
   background-color: #cff;
+  border: 2px solid #000;
   flex-basis: 100%;
   flex-grow: 1;
   margin: 0 0 0 0.2em;
