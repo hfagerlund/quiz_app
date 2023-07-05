@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     onDragStart(event) {
-
+    event.dataTransfer.clearData();
     event
     .dataTransfer
     .setData('text/plain', event.target.id);
@@ -55,7 +55,6 @@ export default {
 
     dropzone.appendChild(draggableElement);
 
-    event.dataTransfer.clearData();
     }
   }
 }
