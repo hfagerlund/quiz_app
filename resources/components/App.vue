@@ -3,7 +3,7 @@
 
 <div id="app">
   <button @click="component ='QuestionsList'">QuestionsList</button>
-  <button @click="component ='Testing'">Test component</button>
+  <button @click="component ='QuestionOne'">Question One</button>
 
   <p>*************************************</p>
   <component :is="component" />
@@ -13,12 +13,12 @@
 
 <script>
 import QuestionsList from '../../tests/components/QuestionsList.vue';
-import Testing from './Test.vue';
+import QuestionOne from './QuestionOne.vue';
 
   export default {
     name: 'app',
     components: {
-      QuestionsList, Testing
+      QuestionsList, QuestionOne
     },
   data() {
     return {
