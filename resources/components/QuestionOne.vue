@@ -9,7 +9,19 @@
       v-on:dragstart="onDragStart($event)"
     >
       <!-- draggable -->
-      Drag this item to place it in the correct sequence.
+      Drag item #1 to place it in the correct sequence.
+    </div>
+  </div>
+
+  <div class="start-box">
+    <div
+      id="draggable-1"
+      class="reorder"
+      draggable="true"
+      v-on:dragstart="onDragStart($event)"
+    >
+      <!-- draggable -->
+      Drag item #2 to place it in the correct sequence.
     </div>
   </div>
 
