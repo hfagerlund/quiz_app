@@ -17,7 +17,23 @@
     v-on:dragover="onDragOver($event)"
     v-on:drop="onDrop($event)"
   >
-    drop zone
+    drop zone 1
+  </div>
+
+  <div
+    class="dropzone"
+    v-on:dragover="onDragOver($event)"
+    v-on:drop="onDrop($event)"
+  >
+    drop zone 2
+  </div>
+
+  <div
+    class="dropzone"
+    v-on:dragover="onDragOver($event)"
+    v-on:drop="onDrop($event)"
+  >
+    drop zone 3
   </div>
 </div>
 </template>
@@ -86,6 +102,7 @@ export default {
   background-color: #cff;
   flex-basis: 100%;
   flex-grow: 1;
+  margin: 0 0 0 0.2em;
   padding: 0.2em;
 }
 </style>
