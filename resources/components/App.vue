@@ -1,5 +1,5 @@
 <template>
-  <h1>Quiz app</h1>
+  <h1 class="text-3xl font-bold underline">Quiz app</h1>
 
 <div id="app">
   <button @click="component ='QuestionsList'">QuestionsList</button>
