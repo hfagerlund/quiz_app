@@ -16,18 +16,29 @@ Quiz API backend using Laravel 10, Sail, Docker with Vue front-end.
 # clone this project
 $ git clone https://github.com/hfagerlund/quiz_app.git
 $ cd quiz_app
+$ cp .env.example .env
+# ...and create .env.testing, customize .env and /config/database.php for your db
 
-# start Sail
+$ composer install --ignore-platform-reqs
+
+# start Sail (leave this running in its own terminal tab)
 $ ./vendor/bin/sail up
+
+# in a new terminal tab:
+$ ./vendor/bin/sail npm install
+$ ./vendor/bin/sail artisan key:generate
+$ ./vendor/bin/sail artisan migrate:fresh --seed
+$ ./vendor/bin/sail npm run dev
+# browse to 0.0.0.0
+```
+
+### Useful Tips
+```console
 # stop Sail
 $ ./vendor/bin/sail down
 
 # check state of services
 $ docker-compose ps
-
-# run front-end app (ie. Vite dev server)
-$ ./vendor/bin/sail npm run dev
-## browse to http://localhost
 ```
 
 ## Tests
