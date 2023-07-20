@@ -4,7 +4,7 @@ import { rest, graphql } from 'msw';
 import { setupServer } from 'msw/node';
 import { beforeAll, afterAll, afterEach, describe, expect, it, test, vi } from 'vitest'
 
-import QuestionsList from './tests/components/QuestionsList.vue'
+import QuestionsList from '../../resources/components/QuestionsList.vue'
 
 //vi.mock('axios')
 
