@@ -4,7 +4,7 @@
   <div class="start-box">
     <div
       id="draggable-1"
-      class="reorder"
+      class="reorder cursor-pointer"
       draggable="true"
       v-on:dragstart="onDragStart($event)"
     >
