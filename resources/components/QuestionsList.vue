@@ -1,5 +1,4 @@
 <template>
-  <h2 class="quizheading">Questions</h2>
     <div class="post" v-for="questionData in quizDataList" v-bind:key="questionData.id">
             <h3>Question: {{ questionData.title }}</h3>
             <p>{{ questionData.body }}</p>
@@ -10,8 +9,11 @@
               {{ thehint.hint }}
             </li>
         </ul>
-        <hr>
-    </div>
+        <hr
+    class="border-t-[1px] border-dotted border-teal-600 h-1 text-center overflow-visible
+    after:content-['***'] after:relative after:top-[-10px] after:bg-white after:text-teal-600 after:px-1"
+/>
+    </div><!-- END .post -->
 </template>
 
 <script>
