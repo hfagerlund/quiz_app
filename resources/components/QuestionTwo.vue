@@ -22,13 +22,16 @@ export default {
                     method: "POST",
                     url: "http://0.0.0.0/graphql",
                     data: {
-                        query: `query {
-              getQuestion(id:2) {
-                title
-                body
-              }
-            }`
+                        query: `query GetQuestionById($questionId: ID!) {
+                          getQuestion(id: $questionId) {
+                            title
+                            body
+                          }
+                        }`,
+                    variables: {
+                      questionId: '2'
                     }
+                  }
                 });
                 this.dataReady = true;
                 this.quizDataList = result.data.data.getQuestion;
