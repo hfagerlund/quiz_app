@@ -77,7 +77,7 @@ return [
             'query' => [
                 'hint' => \App\GraphQL\Queries\HintQuery::class,
                 'hints' => \App\GraphQL\Queries\HintsQuery::class,
-                'question' => \App\GraphQL\Queries\QuestionQuery::class,
+                'getQuestion' => \App\GraphQL\Queries\QuestionQuery::class,
                 'questions' => \App\GraphQL\Queries\QuestionsQuery::class,
             ],
             'mutation' => [
