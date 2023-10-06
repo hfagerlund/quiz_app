@@ -29,7 +29,7 @@ test('html', async() => {
     expect(wrapper.html()).toEqual('<h2 data-v-287d1ee4="">Question One</h2>\n' +
     '<div class="container" data-v-287d1ee4="">\n' +
     '  <div class="start-box" data-v-287d1ee4="">\n' +
-    '    <div id="draggable-1" class="reorder" draggable="true" data-v-287d1ee4="">\n' +
+    '    <div id="draggable-1" class="reorder cursor-pointer" draggable="true" data-v-287d1ee4="">\n' +
     '      <!-- draggable --> Drag item #1 to place it in the correct sequence.\n' +
     '    </div>\n' +
     '  </div>\n' +
