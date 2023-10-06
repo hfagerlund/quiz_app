@@ -47,25 +47,15 @@ test('findComponent', async () => {
 test('mounts a component', async () => {
   try {
     const wrapper = await mount(QuestionsList, {})
-    expect(wrapper.html()).toContain('Questions')
+    expect(wrapper.html()).toContain('Question:')
+    expect(wrapper.html()).toContain('Hints')
+    expect(wrapper.find('h3').text()).to.equal('Hints');
   } catch (error) {
     console.error(error);
   }
 })
 
-test('html', async() => {
-  try {
-    const wrapper = await mount(QuestionsList, {})
-    expect(wrapper.html()).toEqual('<h2 class="quizheading">Questions</h2>')
-  } catch (error) {
-    console.error(error);
-  }
-})
 
-it('test component h2 heading', () => {
-  const wrapper = mount(QuestionsList)
-  expect(wrapper.find('h2').text()).to.equal('Questions');
-})
 
 /*
 describe('API response', () => {
