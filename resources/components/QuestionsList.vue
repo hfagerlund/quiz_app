@@ -1,11 +1,11 @@
 <template>
     <div class="post" v-for="questionData in quizDataList" v-bind:key="questionData.id">
             <h3>Question: {{ questionData.title }}</h3>
-            <p>{{ questionData.body }}</p>
+            <p class="py-2.5">{{ questionData.body }}</p>
 
             <h3>Hints</h3>
         <ul>
-            <li class="just-the-hints" v-for="thehint in questionData.hints" :key="thehint.id">
+            <li class="just-the-hints m-5" v-for="thehint in questionData.hints" :key="thehint.id">
               {{ thehint.hint }}
             </li>
         </ul>
