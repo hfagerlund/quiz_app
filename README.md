@@ -42,7 +42,7 @@ $ docker-compose ps
 ```
 
 <details>
-<summary><strong>Differences between .env and .env.testing</strong></summary>
+<summary><strong>Differences between .env and .env.testing [+]</strong></summary>
 
 <br />
 
