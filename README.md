@@ -41,12 +41,17 @@ $ ./vendor/bin/sail down
 $ docker-compose ps
 ```
 
-### Differences between .env and .env.testing
+<details>
+<summary><strong>Differences between .env and .env.testing</strong></summary>
+
+<br />
+
 | .env        |  .env.testing          |
 | ------------- | ------------- |
 | APP_ENV=local  | APP_ENV=testing  |
 | DB_CONNECTION=mysql  | DB_CONNECTION=test1 (corresponds to `<env name="DB_CONNECTION" value="test1" />` in phpunit.xml)  |
 | DB_DATABASE=db_for_application  | DB_DATABASE=db_for_testing (corresponds to `<env name="DB_DATABASE" value="db_for_testing"/>`, `<env name="APP_ENV" value="db_for_testing"/>` in phpunit.xml) |
+</details>
 
 ## Tests
 ```console
