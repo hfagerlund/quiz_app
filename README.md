@@ -1,13 +1,13 @@
 # quiz_app
-Quiz API backend using Laravel 10, Sail, Docker with Vue front-end.
+Quiz API backend using [Laravel 10], Sail (docker-compose), [GraphQL] with [Vue 3] front-end.
 
 ## What's going on here?
-* Laravel - v10.7.1
-* PHP     - v8.2.5
-* PHPUnit - v10.1.2
+* [Laravel] - v10.7.1
+* [PHP]     - v8.2.5
+* [PHPUnit] - v10.1.2
 
-* Node    - v18.16.0
-* npm     - v9.6.4
+* [Node]    - v18.16.0
+* [npm]     - v9.6.4
 
 (All copyrights for the above remain with their respective owners.)
 
@@ -103,7 +103,7 @@ $ ./vendor/bin/sail artisan make:graphql:type QuestionType
 <br />
 
 ```console
-# install Laravel 10 app (including Sail, MySQL, Redis, Selnium)
+# install Laravel 10 app (including Sail, MySQL, Redis, Selenium)
 $ curl -s https://laravel.build/new-sail-application | bash
 
 # install library for GraphQL
@@ -167,6 +167,18 @@ $ ./vendor/bin/sail npm run dev
 </details>
 
 ## License
-Copyright (c) 2023 Heini Fagerlund. Refer to [License](https://github.com/hfagerlund/quiz_app/blob/main/LICENSE).
+Copyright (c) 2023 Heini Fagerlund. Refer to [License].
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Laravel framework is open-sourced software licensed under the [MIT license].
+
+
+[GraphQL]: https://github.com/rebing/graphql-laravel
+[Laravel]: https://laravel.com/
+[Laravel 10]: https://laravel.com/
+[License]: https://github.com/hfagerlund/quiz_app/blob/main/LICENSE
+[MIT license]: https://opensource.org/licenses/MIT
+[Node]: https://nodejs.org/
+[npm]: https://www.npmjs.com/
+[PHP]: https://www.php.net/
+[PHPUnit]: https://phpunit.de/
+[Vue 3]: https://vuejs.org/
