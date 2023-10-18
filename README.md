@@ -169,7 +169,7 @@ $ ./vendor/bin/sail npm run dev
 ## License
 Copyright (c) 2023 Heini Fagerlund. Refer to [License].
 
-The Laravel framework is open-sourced software licensed under the [MIT license].
+The [Laravel] framework is open-sourced software licensed under the [MIT license].
 
 
 [GraphQL]: https://github.com/rebing/graphql-laravel
