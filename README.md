@@ -169,7 +169,7 @@ $ ./vendor/bin/sail npm run dev
 </details>
 
 ## License
-Copyright :copyright: 2023 Heini Fagerlund. Refer to [License].
+Copyright &copy; 2023 Heini Fagerlund. [License] applies to all parts of quiz_app that are not externally maintained libraries, frameworks.
 
 The [Laravel] framework is open-sourced software licensed under the [MIT license].
 
