@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.1.1](https://github.com/hfagerlund/quiz_app/tree/v0.1.1) (2023-10-19)
+
+[Full Changelog](https://github.com/hfagerlund/quiz_app/compare/v0.1.0...v0.1.1)
+
+**Merged pull requests:**
+
+- Update docs \(add badges\) [\#102](https://github.com/hfagerlund/quiz_app/pull/102) ([hfagerlund](https://github.com/hfagerlund))
+- Update docs \(add links to external projects\) [\#101](https://github.com/hfagerlund/quiz_app/pull/101) ([hfagerlund](https://github.com/hfagerlund))
+
 ## [v0.1.0](https://github.com/hfagerlund/quiz_app/tree/v0.1.0) (2023-10-09)
 
 [Full Changelog](https://github.com/hfagerlund/quiz_app/compare/v0.1.0-alpha.2...v0.1.0)
