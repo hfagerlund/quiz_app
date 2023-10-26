@@ -56,7 +56,8 @@ services:
         ports:
             - '${FORWARD_REDIS_PORT:-6379}:6379'
         volumes:
-            - 'sail-redis:/data'
+            - 'sail-redis:/usr/local/etc/redis/redis.conf:/data'
+        command: redis-server --include /usr/local/etc/redis/redis.conf
         networks:
             - sail
         healthcheck:
