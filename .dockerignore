@@ -1,0 +1,19 @@
+# anything not needed to run the app without Docker
+.git
+.dockerignore
+.gitignore
+.*ignore
+/.github
+.editorconfig
+.gitattributes
+docker-compose*.yml
+Dockerfile*
+CHANGELOG.md
+README.md
+*.log
+/tests
+/node_modules
+
+# environment variables (if defined in docker-compose.yml)
+.env*
+phpunit.xml
